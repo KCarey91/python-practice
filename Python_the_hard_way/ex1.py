@@ -1,0 +1,11 @@
+print("hello world!")
+print("\n")
+print("Hello again",end=" ")
+print("I Like Typing this",end=" ")
+print("This is fun.",end=" ")
+print("Yay! Printing",end=" ")
+print("I'd much rather you 'not'.",end=" ")
+print ('I "said" do not touch this.')
+
+print("hello world", "\n")
+print("An", '"octothorpe"', "is also called a", '"pound,"', '"hash"', '"mesh"', "or any number of other names.", "Pick the one that makes you chill out." )
