@@ -30,7 +30,5 @@ def is_container_running(container_name: str) -> Optional[bool]:
 if __name__ == "__main__":
     container_name = "webserver"
     result = is_container_running(container_name)
-    if result:
+    if not result:
         print("Nginx is running")
-        nginx = SendGmailForServiceDown("Nginx")
-        nginx.send_mail()

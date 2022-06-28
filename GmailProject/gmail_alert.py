@@ -12,9 +12,16 @@ class SendGmailForServiceDown:
         self.service = service
 
     def send_mail(self):
+        """Send Mail for down server
+
+        :param container_name: the name of the container
+        :return: None
+        """
+        # Read the config and pull variables needed for sending mail
         config = configparser.ConfigParser()
         config.read(WPE_CNF)
 
+        #set variables that will be used to send the mail
         port = config.get('gmail_alerts', 'port')
         smtp_server = config.get('gmail_alerts', 'smtp_server')
         sender_email = config.get('gmail_alerts', 'sender_email')
@@ -31,6 +38,4 @@ class SendGmailForServiceDown:
             server.login(sender_email, password)
             server.sendmail(sender_email, receiver_email, message)
 
-nginx = SendGmailForServiceDown("Nginx")
-nginx.send_mail()
 
