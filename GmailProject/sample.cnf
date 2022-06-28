@@ -6,3 +6,9 @@ smtp_server =
 sender_email =
 receiver_email =
 pass =
+
+[services]
+nginx
+apache
+alpine
+ssh
