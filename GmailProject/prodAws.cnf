@@ -1,0 +1,8 @@
+# Production environment configuration information.
+
+[gmail_alerts]
+port = 465
+smtp_server = smtp.gmail.com
+sender_email = prodengcarey@gmail.com
+receiver_email = KCarey9@gmail.com
+pass = ilcwyrmeakiunzxg
