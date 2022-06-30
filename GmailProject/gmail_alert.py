@@ -13,6 +13,17 @@ class Message():
         self.receiver_email = config.get('gmail_alerts', 'receiver_email')
         self.password = config.get('gmail_alerts', 'pass')
 
+    def get_attrs(self) -> dict:
+        my_attrs: dict = {"port": self.port, "smtp_server": self.smtp_server}
+    
+my_message = Message(config)
+my_message.port
+
+all_attrs = my_message.get_attrs()
+
+my_port = all_attrs.get("port")
+
+
 class SendGmailForServiceDown:
     def create_mesage(service):
         #set variables that will be used to send the mail
